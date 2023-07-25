@@ -12,11 +12,17 @@
                 <div class="logo-container">
                     <p>80's DRUMS AND SOUNDS</p>
                 </div>
-                <ul>
-                    <li><a href="index.html">Drums And Sounds</a></li>
-                    <li><a href="presentation.html">Presentation</a></li>
-                    <li><a href="redovisning.html">Redovisning</a></li>
-                </ul>
+                <div id="menu" class="menu-wrapper">
+                    <div class="mobile-menu-top">
+                        <button class="close-button" onclick="closeMenu()">X</button>
+                    </div>
+                    <ul class="links-container">
+                        <li><a href="index.html">Drums And Sounds</a></li>
+                        <li><a href="presentation.html">PRESENTATION</a></li>
+                        <li><a href="redovisning.html">Redovisning</a></li>
+                    </ul>
+                </div>
+                <div id="hamburger" onclick="openMenu()">=</div>
             </div>
         </nav>
         <h1>Presentation</h1>
@@ -32,5 +38,6 @@
             Man använder data-attributet data-key för att binda tangenten med
             ett speciellt ljud som ska låta när man väl trycker på tangenten
         </p>
+        <script src="app.js"></script>
     </body>
 </html>

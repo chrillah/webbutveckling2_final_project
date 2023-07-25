@@ -12,52 +12,60 @@
             <div class="logo-container">
                 <p>80's DRUMS AND SOUNDS</p>
             </div>
-            <ul>
-                <li><a href="index.html">DRUMS AND SOUNDS</a></li>
-                <li><a href="presentation.html">Presentation</a></li>
-                <li><a href="redovisning.html">Redovisning</a></li>
-            </ul>
+            <div id="menu" class="menu-wrapper">
+                <div class="mobile-menu-top">
+                    <button class="close-button" onclick="closeMenu()">X</button>
+                </div>
+                <ul class="links-container">
+                    <li><a href="index.html">DRUMS AND SOUNDS</a></li>
+                    <li><a href="presentation.html">Presentation</a></li>
+                    <li><a href="redovisning.html">Redovisning</a></li>
+                </ul>
+            </div>
+            <div id="hamburger" onclick="openMenu()">=</div>
         </div>
     </nav>
     <body>
-        <div class="keys">
-            <div data-key="65" class="key">
-                <kbd>A</kbd>
-                <span class="sound">arp</span>
+        <main>
+            <div class="keys">
+                <div data-key="65" class="key">
+                    <kbd>A</kbd>
+                    <span class="sound">arp</span>
+                </div>
+                <div data-key="83" class="key">
+                    <kbd>S</kbd>
+                    <span class="sound">crazy base</span>
+                </div>
+                <div data-key="68" class="key">
+                    <kbd>D</kbd>
+                    <span class="sound">cymbal</span>
+                </div>
+                <div data-key="70" class="key">
+                    <kbd>F</kbd>
+                    <span class="sound">kick</span>
+                </div>
+                <div data-key="71" class="key">
+                    <kbd>G</kbd>
+                    <span class="sound">lead</span>
+                </div>
+                <div data-key="72" class="key">
+                    <kbd>H</kbd>
+                    <span class="sound">percs</span>
+                </div>
+                <div data-key="74" class="key">
+                    <kbd>J</kbd>
+                    <span class="sound">snare</span>
+                </div>
+                <div data-key="75" class="key">
+                    <kbd>K</kbd>
+                    <span class="sound">tomtom</span>
+                </div>
+                <div data-key="76" class="key">
+                    <kbd>L</kbd>
+                    <span class="sound">trap kick</span>
+                </div>
             </div>
-            <div data-key="83" class="key">
-                <kbd>S</kbd>
-                <span class="sound">crazy base</span>
-            </div>
-            <div data-key="68" class="key">
-                <kbd>D</kbd>
-                <span class="sound">cymbal</span>
-            </div>
-            <div data-key="70" class="key">
-                <kbd>F</kbd>
-                <span class="sound">kick</span>
-            </div>
-            <div data-key="71" class="key">
-                <kbd>G</kbd>
-                <span class="sound">lead</span>
-            </div>
-            <div data-key="72" class="key">
-                <kbd>H</kbd>
-                <span class="sound">percs</span>
-            </div>
-            <div data-key="74" class="key">
-                <kbd>J</kbd>
-                <span class="sound">snare</span>
-            </div>
-            <div data-key="75" class="key">
-                <kbd>K</kbd>
-                <span class="sound">tomtom</span>
-            </div>
-            <div data-key="76" class="key">
-                <kbd>L</kbd>
-                <span class="sound">trap kick</span>
-            </div>
-        </div>
+        </main>
 
         <audio data-key="65" src="sounds/arp.mp3"></audio>
         <audio data-key="83" src="sounds/crazy base.mp3"></audio>
