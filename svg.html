@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Document</title>
+</head>
+<body style="background-color: #A6977B; text-align: center; margin-top: 30rem">
+
+    <!-- aria-controls och aria-expanded används för att förbättra webbplatstillgänglighet för användare med funktionsnedsättningar-->
+    <!-- till detta kommer vi att använda aria-expanded till att styra med Javascript -->
+
+    <!-- börja med att skriva till svg i html -->
+
+    <!-- Vi ger den en klass -->
+
+    <!-- viewBox är det som vi får se av SVG. Måtten kan man själv bestämma,  -->
+    <!-- och att vi har 100 är för att det ska vara lättare att arbeta med -->
+
+    <!-- width, bredden på hur stor själva viewBoxen är,  -->
+
+    <!-- rect är en form i SVG som är en rektangel, används för att rita ut en ruta eller rektangel -->
+    <!-- Tilldelingen av klass refererar till den övre av tre streck som utgör en klassisk hamburgarknapp -->
+    <!-- och för att underlätta styling, lägger vill klassen line i rect -->
+
+    <!-- width i rect är baserad på viewBoxens mått -->
+    <!-- man kan ungefär säga att den 80% av 100% -->
+    <!-- height i rect, fungerar precis likadant som width i rect -->
+
+    <!-- just nu ser vi en liten rektangel som är 80% bred av 30px och 10% hög av 30px -->
+
+    <!-- för att positionera en rektangel innanför viewBoxen använder man x och y, likt koordinater -->
+
+    <!-- Just för tillfället har vi toppen av tre delar av vår hamburgarknapp -->
+
+    <!-- för att lägga till de andra två, kan vi då kopiera den första rektangeln och ändra i y-axeln -->
+    <!-- samt ändra klassnamnen -->
+
+    <!-- nu har vi tre stycken rektanglar som tillsammans bildar en hamburgare -->
+
+    <!-- som med alla former inom vektor kan man även runda av hörn, ocb det gör man med rx -->
+
+    <!-- För att ändra höjd på de tre olika rektanglarna så gör man det på y-axeln, om man vill korrigera -->
+
+    <!-- för att animera med Javascript, behöver vi lägga till lite styling -->
+
+
+
+    <button class="svg-container" aria-controls="primary-navigation" aria-expanded="false">
+
+        <svg class="hamburgar" viewBox="0 0 100 100" width="40">
+
+            <rect class="top line" width="80" height="10"
+            x="10" y="30" rx="5">
+            </rect>
+            <rect class="middle line" width="80" height="10"
+            x="10" y="50" rx="5">
+            </rect>
+            <rect class="bottom line" width="80" height="10"
+            x="10" y="70" rx="5">
+            </rect>
+
+        </svg>
+
+
+    </button>
+</body>
+</html>

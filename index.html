@@ -4,20 +4,22 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="stylesheet.css" />
-        <title>DRUMS AND SOUNDS</title>
+        <title>DRUM</title>
     </head>
 
     <nav>
         <div class="nav-wrapper">
             <div class="logo-container">
-                <p>80's DRUMS AND SOUNDS</p>
+                <img src="/img/drum_logo.png" alt="DRUM-logotyp för webbplatsen">
             </div>
             <div id="menu" class="menu-wrapper">
                 <div class="mobile-menu-top">
-                    <button class="close-button" onclick="closeMenu()">X</button>
+                    <button class="close-button" onclick="closeMenu()">
+                        X
+                    </button>
                 </div>
                 <ul class="links-container">
-                    <li><a href="index.html">DRUMS AND SOUNDS</a></li>
+                    <li><a href="index.html">DRUM</a></li>
                     <li><a href="presentation.html">Presentation</a></li>
                     <li><a href="redovisning.html">Redovisning</a></li>
                 </ul>
@@ -26,50 +28,64 @@
         </div>
     </nav>
     <body>
-        <main>
-            <div class="keys">
-                <div data-key="65" class="key">
-                    <kbd>A</kbd>
-                    <span class="sound">clap</span>
-                </div>
-                <div data-key="83" class="key">
-                    <kbd>S</kbd>
-                    <span class="sound">tambourin kick</span>
-                </div>
-                <div data-key="68" class="key">
-                    <kbd>D</kbd>
-                    <span class="sound">drum</span>
-                </div>
-                <div data-key="70" class="key">
-                    <kbd>F</kbd>
-                    <span class="sound">ti</span>
-                </div>
-                <div data-key="71" class="key">
-                    <kbd>G</kbd>
-                    <span class="sound">crash</span>
-                </div>
-                <div data-key="72" class="key">
-                    <kbd>H</kbd>
-                    <span class="sound">bass drum</span>
-                </div>
-                <div data-key="74" class="key">
-                    <kbd>J</kbd>
-                    <span class="sound">hi tom</span>
-                </div>
-                <div data-key="75" class="key">
-                    <kbd>K</kbd>
-                    <span class="sound">ride</span>
-                </div>
-                <div data-key="76" class="key">
-                    <kbd>L</kbd>
-                    <span class="sound">snare</span>
+        <main class="main-wrapper">
+            <div class="main-container">
+                <h1>Spela trummor</h1>
+                <p>Använd tangentknapparna.</p>
+                <div class="keys">
+                    <div data-key="65" class="key">
+                        <kbd>A</kbd>
+                        <span class="sound">clap</span>
+                    </div>
+                    <div data-key="83" class="key">
+                        <kbd>S</kbd>
+                        <span class="sound">kick</span>
+                    </div>
+                    <div data-key="68" class="key">
+                        <kbd>D</kbd>
+                        <span class="sound">tom</span>
+                    </div>
+                    <div data-key="70" class="key">
+                        <kbd>F</kbd>
+                        <span class="sound">ti</span>
+                    </div>
+                    <div data-key="71" class="key">
+                        <kbd>G</kbd>
+                        <span class="sound">crash</span>
+                    </div>
+                    <div data-key="72" class="key">
+                        <kbd>H</kbd>
+                        <span class="sound">drum</span>
+                    </div>
+                    <div data-key="74" class="key">
+                        <kbd>J</kbd>
+                        <span class="sound">hi tom</span>
+                    </div>
+                    <div data-key="75" class="key">
+                        <kbd>K</kbd>
+                        <span class="sound">ride</span>
+                    </div>
+                    <div data-key="76" class="key">
+                        <kbd>L</kbd>
+                        <span class="sound">snare</span>
+                    </div>
                 </div>
             </div>
+            <a href="svg.html">SVG</a>
         </main>
 
-        <audio data-key="65" src="sounds/198034__novasoundtechnology__the-aggressives-clap-hard-handclap-percussion-drum-nova-sound.wav"></audio>
-        <audio data-key="83" src="sounds/198041__novasoundtechnology__tambolarge-tambourine-kick-drum-nova-sound.wav"></audio>
-        <audio data-key="68" src="sounds/336962__the-sacha-rush__drum.wav"></audio>
+        <audio
+            data-key="65"
+            src="sounds/198034__novasoundtechnology__the-aggressives-clap-hard-handclap-percussion-drum-nova-sound.wav"
+        ></audio>
+        <audio
+            data-key="83"
+            src="sounds/198041__novasoundtechnology__tambolarge-tambourine-kick-drum-nova-sound.wav"
+        ></audio>
+        <audio
+            data-key="68"
+            src="sounds/336962__the-sacha-rush__drum.wav"
+        ></audio>
         <audio data-key="70" src="sounds/445079__aj13461__ti.wav"></audio>
         <audio data-key="71" src="sounds/488458__trvth__crash1drum.wav"></audio>
         <audio data-key="72" src="sounds/488459__trvth__bass1drum.wav"></audio>
