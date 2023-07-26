@@ -46,13 +46,3 @@ keys.forEach((key) => key.addEventListener('transitionend', removeTransition))
 // denna event triggas nu av tangentnedtryckningar.
 // vi skickar vad som ska triggas med en funktion som ger oss ett event
 window.addEventListener('keydown', playSound)
-
-// hamburgarmenyn
-function closeMenu() {
-    menu.style.display = 'none'
-}
-
-function openMenu() {
-    menu.style.display = 'grid'
-}
-const menu = document.getElementById('menu')
