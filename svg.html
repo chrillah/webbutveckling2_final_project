@@ -45,25 +45,36 @@
 
     <!-- för att animera med Javascript, behöver vi lägga till lite styling -->
 
+    <!-- vi lägger till en transisition, en egenskap som skapar en övergång från ett tillstånd till en annan -->
+
+    <!-- transform-origin -->
+
+    <!-- Vi bestämmer hur aria-expanded ska hanteras i styling -->
+    <!-- nu stylar vi om knappen är expanderad, det vill säga, att knappen är "öppen" -->
+
+    <!-- en av styrkorna med svg är att kunna styra och styla varje egenskap. Vi kan bestämma hur varje rektangel ska uppföra sig -->
+
+    <!-- Med hjälp av attributen aria-expanded, kan vi manipulera det med en enkel javascript -->
 
 
     <button class="svg-container" aria-controls="primary-navigation" aria-expanded="false">
 
-        <svg class="hamburgar" viewBox="0 0 100 100" width="40">
+        <svg class="hamburger" viewBox="0 0 100 100" width="40">
 
             <rect class="top line" width="80" height="10"
-            x="10" y="30" rx="5">
+            x="10" y="70" rx="5">
             </rect>
             <rect class="middle line" width="80" height="10"
             x="10" y="50" rx="5">
             </rect>
             <rect class="bottom line" width="80" height="10"
-            x="10" y="70" rx="5">
+            x="10" y="30" rx="5">
             </rect>
 
         </svg>
 
 
     </button>
+    <script src="toogleHamburgerButton.js"></script>
 </body>
 </html>

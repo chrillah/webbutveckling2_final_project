@@ -1,27 +1,36 @@
+/*-------------------------- */
+
+/* Innehållsförteckning */
+/* 1) Google-font import */
+/* 2) Variabler */
+/* 3) Globala inställningar */
+/* 4) Knappar och Effekter*/
+/* 5) Navbar */
+/* 6) Svg-hamburgaren */
+/* 7) Hero */
+/* 8) Trummaskinen */
+/* 9) Footer */
+
+/*-------------------------- */
+
+/* Google-font import */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
+/* Variabler */
 :root {
+    --max-size: 1000px;
     --yellow: #ffc600;
-    --lavender: #8A8FFF;
+    --lavender: #8a8fff;
     --white: #fff;
     --black: #000;
 }
 
+/* Globala inställningar */
 body {
     box-sizing: border-box;
     background-color: var(--black);
     color: var(--white);
-}
-
-nav {
-    margin: 0;
-    padding: 0;
-    margin: 0 .2rem;
-}
-
-.logo-container{
-    max-width: 200px;
 }
 
 h1,
@@ -30,7 +39,6 @@ h3,
 h4 {
     font-family: 'DM Serif Display', serif;
 }
-
 
 h5,
 h6,
@@ -45,74 +53,20 @@ ul {
     padding: 0;
 }
 
-img{
-    width: 100%;
-    max-height: auto;
-}
-
-.links-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.links-container{
-    text-align: right;
-}
-
-#hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-
-
-
-
-.svg-container{
-    border: 3px solid var(--black);
-    border-radius: 3px;
-}
-
-.hamburger .line{
-    transition: 1s;
-    transform-origin: center;
-}
-
-
-
-
-
-
-
-
-
-.mobile-menu-top {
-    width: 100%;
-}
-
-li {
+li{
     margin: 0;
     padding: 0;
     list-style: none;
-    margin: 0 1rem;
 }
 
-a {
+a{
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    color: var(--white);
 }
 
-.nav-wrapper {
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
+img {
+    width: 100%;
+    max-height: auto;
 }
 
 button {
@@ -122,18 +76,9 @@ button {
     border: none;
 }
 
-.close-button {
-    border: 1px solid var(--black);
-    padding: 0.5rem;
-    margin: 1rem;
-    float: right;
-}
+/* Knappar och Effekter*/
 
-.link-button{
-
-}
-
-.app-button{
+.app-button {
     background-color: transparent;
     border: 3px solid var(--lavender);
     padding: 1rem;
@@ -142,26 +87,123 @@ button {
     transition: background-color 0.2s ease-in;
 }
 
-.app-button:hover{
+.app-button:hover {
     background-color: var(--lavender);
     color: var(--black);
+}
+
+a:hover{
+    background-color: var(--lavender);
+    color: var(--black);
+}
+
+/* Navbar */
+.nav-wrapper {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    margin: 0 0.2rem;
+}
+
+.nav-container {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-size);
+}
+
+.logo-container {
+    max-width: 200px;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links-container li {
+    max-width: 200px;
+    width: 100%;
+    border: 1px solid var(--white);
+    margin-top: 0.5rem;
+}
+
+.links-container li a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--white);
+    padding: 1rem;
+}
+
+.links-container li:focus {
+    background-color: var(--lavender);
+    color: var(--black);
+}
+
+.active-page {
+    background-color: var(--lavender);
+}
+
+.active-page a {
+    font-weight: bold;
+    color: var(--black) !important;
+}
+
+/* Svg-hamburgaren */
+#hamburger {
+    display: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#hamburger .line {
+    transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+    transform-origin: center;
+}
+
+#hamburger[aria-expanded='true'] .line {
+    transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+}
+
+#hamburger[aria-expanded='true'] :is(.top, .bottom) {
+    y: 45;
+}
+#hamburger[aria-expanded='true'] .top {
+    rotate: 45deg;
+}
+#hamburger[aria-expanded='true'] .middle {
+    opacity: 0;
+}
+#hamburger[aria-expanded='true'] .bottom {
+    rotate: -45deg;
+}
+
+#menu {
+    display: block;
 }
 
 @media (max-width: 768px) {
     #menu {
         position: fixed;
         width: 100%;
-        top: 0;
+        top: 50px;
         left: 0;
         bottom: 0;
         right: 0;
         display: none;
-        background-color: var(--white);
+        background-color: var(--black);
         grid-template-rows: 40px 1fr 1fr 1fr;
     }
 
     a {
-        color: var(--black);
+        color: var(--white);
         font-weight: bold;
     }
 
@@ -177,22 +219,42 @@ button {
     }
 }
 
-main {
-
-}
-
-.main-wrapper{
+/* Hero */
+.hero-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.main-container{
-    margin: 0 .2rem;
+.hero-container{
+    margin: 0 0.2rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--max-size);
 }
+
+.hero-title {
+    margin: 0;
+    padding: 0;
+    margin-top: 20vh;
+    font-size: 6rem;
+    line-height: 5rem;
+    word-wrap: break-word;
+}
+
+/* Main  */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    margin: 0 0.2rem;
+    width: 100%;
+    max-width: var(--max-size);
+}
+
+/* Trummaskinen */
 
 .keys {
     width: 100%;
@@ -213,7 +275,7 @@ main {
 }
 
 .playing {
-    transform: scale(1.1);
+    transform: scale(1.02);
     border-color: var(--yellow);
     box-shadow: 0 0 10px var(--yellow);
     background-color: var(--white);
@@ -231,8 +293,42 @@ kbd {
     color: var(--lavender);
 }
 
-/* SVG Fördjupning */
+/* Footer */
 
-.button-one{
+.footer-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.footer-container{
+    width: 100%;
+    max-width: var(--max-size);
+    margin: 0 0.2rem;
+}
+
+@media (min-width:768px) {
+    .footer-links-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+}
+
+.footer-links-container li{
+    padding: .2rem;
+}
+
+.footer-links-container li a{
+    color: var(--white);
+    text-decoration: none;
+    transition: .2s ease-in;
+}
+
+.footer-links-container{
+    border: 1px solid var(--white);
+}
+
+.footer-container p span{
+    font-style: italic;
 }

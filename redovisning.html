@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
     <head>
         <meta charset="UTF-8" />
+        <link rel="icon" href="/img/drum_favicon.png" type="image/png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="stylesheet.css" />
         <title>Redovisning</title>
     </head>
     <body>
-        <nav>
-            <div class="nav-wrapper">
+        <nav class="nav-wrapper">
+            <div class="nav-container">
                 <div class="logo-container">
                     <img src="/img/drum_logo.png" alt="DRUM-logotyp för webbplatsen">
                 </div>
-                <div id="menu" class="menu-wrapper">
-                    <div class="mobile-menu-top">
-                        <button class="close-button" onclick="closeMenu()">X</button>
-                    </div>
+                <div id="menu">
                     <ul class="links-container">
-                        <li><a href="index.html">Drum</a></li>
+                        <li class="active-page"><a href="index.html">Drum</a></li>
                         <li><a href="presentation.html">Presentation</a></li>
-                        <li><a href="redovisning.html">REDOVINSING</a></li>
+                        <li><a href="redovisning.html">Redovisning</a></li>
                     </ul>
                 </div>
-                <div id="hamburger" onclick="openMenu()">=</div>
+                <button id="hamburger" aria-controls="primary-navigation" aria-expanded="false">
+
+                    <svg viewBox="0 0 100 100" width="40" fill="white">
+
+                        <rect class="top line" width="80" height="10"
+                        x="10" y="70" rx="5">
+                        </rect>
+                        <rect class="middle line" width="80" height="10"
+                        x="10" y="50" rx="5">
+                        </rect>
+                        <rect class="bottom line" width="80" height="10"
+                        x="10" y="30" rx="5">
+                        </rect>
+
+                    </svg>
+                </button>
             </div>
         </nav>
-
+        <div class="hero"></div>
         <main class="redovisning">
             <h1>Redovisning</h1>
             <p>Redovisning av det jag har kodat</p>

@@ -1,41 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
     <head>
         <meta charset="UTF-8" />
+        <link rel="icon" href="/img/drum_favicon.png" type="image/png" />
         <link rel="stylesheet" href="stylesheet.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Presentation</title>
     </head>
     <body>
-        <nav>
-            <div class="nav-wrapper">
+        <nav class="nav-wrapper">
+            <div class="nav-container">
                 <div class="logo-container">
                     <img src="/img/drum_logo.png" alt="DRUM-logotyp för webbplatsen">
                 </div>
-                <div id="menu" class="menu-wrapper">
-                    <div class="mobile-menu-top">
-                        <button class="close-button" onclick="closeMenu()">X</button>
-                    </div>
+                <div id="menu">
                     <ul class="links-container">
-                        <li><a href="index.html">Drum</a></li>
-                        <li><a href="presentation.html">PRESENTATION</a></li>
+                        <li class="active-page"><a href="index.html">Drum</a></li>
+                        <li><a href="presentation.html">Presentation</a></li>
                         <li><a href="redovisning.html">Redovisning</a></li>
                     </ul>
                 </div>
-                <div id="hamburger" onclick="openMenu()">=</div>
+                <button id="hamburger" aria-controls="primary-navigation" aria-expanded="false">
+
+                    <svg viewBox="0 0 100 100" width="40" fill="white">
+
+                        <rect class="top line" width="80" height="10"
+                        x="10" y="70" rx="5">
+                        </rect>
+                        <rect class="middle line" width="80" height="10"
+                        x="10" y="50" rx="5">
+                        </rect>
+                        <rect class="bottom line" width="80" height="10"
+                        x="10" y="30" rx="5">
+                        </rect>
+
+                    </svg>
+                </button>
             </div>
         </nav>
+        <div class="hero"></div>
         <h1>Presentation</h1>
-        <p>Du ska presentera projektet av vald teknik. </p>
+        <p>Du ska presentera projektet av vald teknik.</p>
         <p>Jag valde att fördjupa mig i SVG</p>
         <p>Här skriver du kort om vad SVG är och varför det är att föredras</p>
         <p>KÄLLA PÅ DINA PÅSTÅENDEN</p>
         <p>Skriv källan också</p>
         <p>https://developer.mozilla.org/en-US/docs/Web/SVG</p>
-        <p>https://www.creativebloq.com/news/6-reasons-why-you-should-be-using-svg</p>
+        <p>
+            https://www.creativebloq.com/news/6-reasons-why-you-should-be-using-svg
+        </p>
         <p>https://deliciousbrains.com/svg-advantages-developers/</p>
 
-        <p>BILDER PÅ PROCESSEN NÄR DU HAR SKRIVIT SVG-KODEN UTIRFRÅN SVG-tutorialn</p>
+        <p>
+            BILDER PÅ PROCESSEN NÄR DU HAR SKRIVIT SVG-KODEN UTIRFRÅN
+            SVG-tutorialn
+        </p>
         <p>STEG FÖR STEG, TYP SOM EN GUIDE</p>
         <p>BILD PÅ: svg-rutan i hmtl</p>
         <p>BILD PÅ WEBBLÄSAREN när svg utvecklas</p>
@@ -44,8 +63,18 @@
 
         <p>SKRIV UPP ALLA KÄLLOR</p>
         <p>KÄLLA</p>
-        <a style="color: white;" target="_blank" href="https://courses.wesbos.com/account/access/64be748ce6f7bdd62736eef4/view/194130650">TRUM MASKIN</a>
-        <a style="color: white;" target="_blank" href="https://www.youtube.com/watch?v=R00QiudbD4Y&t=1007s&ab_channel=KevinPowell">SVG-Tutorial</a>
+        <a
+            style="color: white"
+            target="_blank"
+            href="https://courses.wesbos.com/account/access/64be748ce6f7bdd62736eef4/view/194130650"
+            >TRUM MASKIN</a
+        >
+        <a
+            style="color: white"
+            target="_blank"
+            href="https://www.youtube.com/watch?v=R00QiudbD4Y&t=1007s&ab_channel=KevinPowell"
+            >SVG-Tutorial</a
+        >
         <p>Inledning</p>
 
         <p>Jag valde att koda ihop en trum-och ljudmaskin</p>

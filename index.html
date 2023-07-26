@@ -1,37 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
     <head>
         <meta charset="UTF-8" />
+        <link rel="icon" href="/img/drum_favicon.png" type="image/png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="stylesheet.css" />
         <title>DRUM</title>
     </head>
 
-    <nav>
-        <div class="nav-wrapper">
+    <nav class="nav-wrapper">
+        <div class="nav-container">
             <div class="logo-container">
                 <img src="/img/drum_logo.png" alt="DRUM-logotyp för webbplatsen">
             </div>
-            <div id="menu" class="menu-wrapper">
-                <div class="mobile-menu-top">
-                    <button class="close-button" onclick="closeMenu()">
-                        X
-                    </button>
-                </div>
+            <div id="menu">
                 <ul class="links-container">
-                    <li><a href="index.html">DRUM</a></li>
+                    <li class="active-page"><a href="index.html">Drum</a></li>
                     <li><a href="presentation.html">Presentation</a></li>
                     <li><a href="redovisning.html">Redovisning</a></li>
                 </ul>
             </div>
-            <div id="hamburger" onclick="openMenu()">=</div>
+            <button id="hamburger" aria-controls="primary-navigation" aria-expanded="false">
+
+                <svg viewBox="0 0 100 100" width="40" fill="white">
+
+                    <rect class="top line" width="80" height="10"
+                    x="10" y="70" rx="5">
+                    </rect>
+                    <rect class="middle line" width="80" height="10"
+                    x="10" y="50" rx="5">
+                    </rect>
+                    <rect class="bottom line" width="80" height="10"
+                    x="10" y="30" rx="5">
+                    </rect>
+
+                </svg>
+            </button>
         </div>
     </nav>
     <body>
+        <div class="hero-wrapper">
+            <div class="hero-container">
+                <h1 class="hero-title">Spela trummor</h1>
+                <p>Använd tangentknapparna, spela loss!</p>
+            </div>
+        </div>
         <main class="main-wrapper">
             <div class="main-container">
-                <h1>Spela trummor</h1>
-                <p>Använd tangentknapparna.</p>
                 <div class="keys">
                     <div data-key="65" class="key">
                         <kbd>A</kbd>
@@ -71,8 +86,24 @@
                     </div>
                 </div>
             </div>
-            <a href="svg.html">SVG</a>
+
+            <!-- <a href="svg.html">SVG</a> -->
+
         </main>
+        <footer class="footer-wrapper">
+            <div class="footer-container">
+                <h2>Källa:</h2>
+                <ul class="footer-links-container">
+                    <li><a target="_blank" href="https://javascript30.com/">Javascript30</a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/watch?v=R00QiudbD4Y&t=1007s&ab_channel=KevinPowell">
+                        SVG-hamburgar tutorial
+                    </a></li>
+                    <li><a target="_blank" href="https://freesound.org/">Freesound</a></li>
+                </ul>
+                <p><span>Ett skolprojekt för Webbutveckling 2, av: </span>Christopher Rönnberg</p>
+                <p></p>
+            </div>
+        </footer>
 
         <audio
             data-key="65"
