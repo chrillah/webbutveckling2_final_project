@@ -164,7 +164,7 @@ button {
 
 /* varnade för det här, hittade inget fix.  */
 #hamburger[aria-expanded='true'] :is(.top, .bottom) {
-    y: 45;
+    y: 45; /*<---- den här */
 }
 #hamburger[aria-expanded='true'] .top {
     transform: rotate(45deg);
