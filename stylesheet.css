@@ -13,7 +13,7 @@
 /* 6) Svg-hamburgaren */
 /* 7) Hero */
 /* 8) Trummaskinen */
-/* 9) Presentationen tekniken bakom */
+/* 9) Presentationen tekniken bakom och Redovisning*/
 /* 10) Footer */
 
 /*-------------------------- */
@@ -77,20 +77,6 @@ button {
 }
 
 /* Knappar och Effekter*/
-
-.app-button {
-    background-color: transparent;
-    border: 3px solid var(--lavender, lavender);
-    padding: 1rem;
-    margin: 1rem;
-    color: var(--lavender, lavender);
-    transition: background-color 0.2s ease-in;
-}
-
-.app-button:hover {
-    background-color: var(--lavender, lavender);
-    color: var(--black, #000);
-}
 
 .footer-links-container li a:hover,
 .links-container li:hover {
@@ -213,6 +199,7 @@ button {
     }
 
     .links-container {
+        margin-top: 20vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -291,13 +278,14 @@ button {
 .explainer {
     font-family: 'Azeret Mono', monospace;
     line-height: 1.5rem;
-    word-wrap: break-word;
+    word-break: break-all;
     width: 100%;
     max-width: 400px;
     color: var(--lavender, lavender);
 }
 
 .explainer span {
+    word-break: break-all;
     color: var(--white, #fff);
     padding-left: 20px;
 }
