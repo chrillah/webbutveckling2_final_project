@@ -89,8 +89,7 @@
                         <div class="img-container">
                             <img
                                 src="/img/presentationImg/drummachine.png"
-                                alt="En bild på hemsidan"
-                            >
+                                alt="En bild på hemsidan">
                         </div>
                     </div>
                 </section>
@@ -109,9 +108,15 @@
                                 audio-taggen. Likt img-taggen som är speciellt
                                 skriven för att hantera bilder, är audio-taggen
                                 speciellt skriven för att hantera
-                                ljuduppspelning. Dessa ljud får man själv ladda
-                                upp. Det finns lika många audio-taggar som det
-                                finns div med data-keyatrributet. Både div- och
+                                ljuduppspelning. Audioelementet syns för övrigt
+                                inte. Den finns för att spela upp ljud. Ljuden
+                                är royalfree och har Common Creative-licens för
+                                att kunna användas lagligt. Här är
+                                <a target="_blank" href="https://freesound.org/"
+                                    ><i>hemsidan</i></a
+                                >, från vilket ljuden jag har laddat ner ifrån.
+                                Det finns lika många audio-taggar som det finns
+                                div med data-keyatrributet. Både div- och
                                 audio-taggarna har samma tilldelade nummer för
                                 att enkelt sammankoppla ihop dem med Javascript.
                                 På det sättet kan vi spela med tangenterna och
@@ -211,14 +216,15 @@
                                 använda en loop. I det här fallet, en
                                 forEach-loop, liknande som en for-loop men som
                                 är inbyggd i Javascript. ForEach-loppen tar
-                                flera argument, och returnerar en index för
-                                varje dataelement i en kollektion. På så sätt,
-                                kan vi då tilldela en addEventListiner för varje
-                                div-tagg i arrayen. Eventet som ska triggas görs
-                                av en "transition", övergång, vilket startar
-                                igång en funktion “removeTransition” vars
-                                uppgift är att ta bort den klass som tilldelades
-                                det tangentknapp som blev nedtryckt.
+                                flera argument, här skickas ett
+                                <i>callback-funktion</i> som argument. På så
+                                sätt, kan vi då tilldela en addEventListiner för
+                                varje div-tagg i arrayen. Eventet som ska
+                                triggas görs av en "transition", övergång,
+                                vilket startar igång en funktion
+                                “removeTransition” vars uppgift är att ta bort
+                                den klass som tilldelades det tangentknapp som
+                                blev nedtryckt.
                             </p>
                             <p>
                                 I funktionen removeTransition, som triggas igång
@@ -305,6 +311,41 @@
                     </div>
                 </section>
                 <section class="information-wrapper">
+                    <h3>Kort om svg</h3>
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                <a
+                                    target="_blank"
+                                    href="https://developer.mozilla.org/en-US/docs/Web/SVG"
+                                    >SVG</a
+                                >
+                                är en xml-markup-språk (likt hmtl) som möjliggör
+                                2d-baserad vektorgrafik. Skillnaden mellan
+                                vektorgrafik och exempelvis, pixlar är att
+                                vektor går att förstora och förminska utan att
+                                upplösningen får lida likt om man nu skulle
+                                förstora en pixelgrafik. En
+                                <a
+                                    target="_blank"
+                                    href="https://deliciousbrains.com/svg-advantages-developers/ "
+                                    >snabbgoogling</a
+                                >
+                                bort hittar vi artiklar som lyfter upp just SVG
+                                som ger fördelar som att det tar mindre utrymme
+                                i filstorlek, går att styla med CSS, animeras
+                                med Javascript vilket är en fördel när man
+                                hanterar loggor, knappar och annat som man vill
+                                programmera dynamiskt till sin webbplats. Dock
+                                så lämpar sig SVG inte som användning till att
+                                rita upp en bild, utan lämpar sig bäst till
+                                knappar loggor eller annat som vektor gör sig
+                                bäst på som former och annat grafiskt.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="information-wrapper">
                     <h3>HTML</h3>
                     <div class="information-container">
                         <div class="text-item">
@@ -323,11 +364,13 @@
                             <p class="explainer">
                                 &lt;svg class="hamburger" viewBox="0 0 100 100"
                                 width="40"&gt; <br>
+                                <br>
                                 <span
                                     >&lt;rect class="top line" width="80"
                                     height="10" x="10" y="70"
                                     rx="5"&gt;&lt;/rect&gt;</span
                                 >
+                                <br>
                                 <br>
                                 <span
                                     >&lt;rect class="middle line" width="80"
@@ -335,11 +378,13 @@
                                     rx="5"&gt;&lt;/rect&gt;</span
                                 >
                                 <br>
+                                <br>
                                 <span
                                     >&lt;rect class="bottom line" width="80"
                                     height="10" x="10" y="30"
                                     rx="5"&gt;&lt;/rect&gt;</span
                                 >
+                                <br>
                                 <br>
                                 &lt;/svg&gt;
                             </p>
@@ -452,7 +497,7 @@
                                     hamburgerButton.getAttribute('aria-expanded');
                                 </span>
                                 <br>
-                                <span> if (isOpened === 'false') { </span><br>
+                                <span> if (isOpened === 'false') { </span> <br>
                                 <span>
                                     hamburgerButton.setAttribute('aria-expanded',
                                     'true'); </span

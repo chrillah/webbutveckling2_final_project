@@ -13,7 +13,8 @@
                 <div class="logo-container">
                     <img
                         src="/img/logos/drum_logo.png"
-                        alt="DRUM-logotyp för webbplatsen">
+                        alt="DRUM-logotyp för webbplatsen"
+                    >
                 </div>
                 <div id="menu">
                     <ul class="links-container">
@@ -21,13 +22,12 @@
                             <a href="index.html">Drum</a>
                         </li>
                         <li><a href="presentation.html">Tekniken</a></li>
-                        <li class="active-page"><a href="redovisning.html">Redovisning</a></li>
+                        <li class="active-page">
+                            <a href="redovisning.html">Redovisning</a>
+                        </li>
                     </ul>
                 </div>
-                <button
-                    id="hamburger"
-                    aria-expanded="false"
-                >
+                <button id="hamburger" aria-expanded="false">
                     <svg viewBox="0 0 100 100" width="40" fill="white">
                         <rect
                             class="top line"
@@ -59,139 +59,271 @@
         </nav>
         <div class="hero-wrapper">
             <div class="hero-container">
-                <h1 class="hero-title">Spela trummor</h1>
-                <p>Använd tangentknapparna, spela loss!</p>
+                <h1 class="hero-title">Redovisning</h1>
             </div>
         </div>
         <main class="main-wrapper">
             <div class="main-container">
-                <h1>Trummaskinen</h1>
-                <p>
-                    Jag bestämde mig för att bygga en trummaskin, efter en
-                    videokurs från hemsidan
-                    <a target="_blank" href="https://javascript30.com/"
-                        >Javascript30</a
-                    >. Trummaskinen spelar man med tangentbordet. På skärmen,
-                    ser vi både vilka tangenter man använder men också vilket
-                    ljud den spelar upp.
-                </p>
-                <h3>HTML</h3>
-                <p>
-                    Tekniken bakom är uppbyggd i Javascript med HTML. HTML-koden
-                    är strukturerad med en div, som fungerar som en behållare.
-                </p>
-                <p>
-                    I behållaren finns flera div där varje div är uppbyggd med
-                    en attribut <i>data-key</i>, vilket är en teknik som
-                    tillåter specialanpassade egenskaper till alla
-                    HTML-element(<a
-                        target="_blank"
-                        href="https://www.w3schools.com/tags/att_data-.asp"
-                        >om data-key</a
-                    >)
-                </p>
-                <p>
-                    Den attibuten är kopplad till en ljud-fil. Förutom en
-                    <i>data-key</i>, så finns en <i>kbd</i>-tag, som finns för
-                    att definera tangentknappsnedtryck (<a
-                        target="_blank"
-                        href="https://www.w3schools.com/tags/tag_kbd.asp"
-                        >om kbd</a
-                    >), den taggen representerar själva tangentknappen. Och en
-                    spanelement för enkel styling, med själva ljudtiteln.
-                </p>
-                <p>
-                    I HMTL-strukturen finns ett element, som jag har inte har
-                    sett tidigare, ett <i>audioelement</i>, som används för att
-                    spela upp ljud (<a
-                        target="_blank"
-                        href="https://www.w3schools.com/html/html5_audio.asp"
-                        >om audioelementet</a
-                    >), som imgelementet är till för bilder.
-                </p>
-                <p>
-                    I audioelementet finns också ett <i>data-keyattributen</i>,
-                    och en ljudfil, kopplad till audioelementet.
-                </p>
-                <p>
-                    Audioelementet syns för övrigt inte. Den finns för att spela
-                    upp ljud. Ljuden är royalfree och har Common Creative-licens
-                    för att kunna användas lagligt. Här är
-                    <a target="_blank" href="https://freesound.org/"
-                        ><i>hemsidan</i></a
-                    >, från vilket ljuden jag har laddat ner ifrån.
-                </p>
-                <h3>Javscript</h3>
-                <p>
-                    Scripten består av två stycken funktioner, en selektion av
-                    knappar och element och två stycken events.
-                </p>
-                <p>
-                    Selektionen av knapparna är själva div från hmtl, som då
-                    refererar till tangentknapparna. I Javascript, får vi selektionen i en lista, en array, vilket är en behållare av data.
-                    Knapparna i behållaren ska tilldelas ett event, det är en händelse som triggas av något. Det här bygget handlar om en trummaskin. Det som triggar ljudet, är ju tangentknapparna. Och det är det här vi ska lägga till.
-                    Istället för att gå igenom varje knapp, för sig, kan vi låta Javascript göra det åt oss med en loop.
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                playSound(e) när en funktion skriven att spela
+                                upp ljud. "e":et i parametern, (det som är
+                                innaför parenteserna) kommer ifrån en så kallad,
+                                <i>händelse</i>. <i>Händelsen</i> kan skapas
+                                från ett html-element. Innanför måsvingarna
+                                finns instruktioner på vad funktionen ska
+                                utföras.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">function playSound(e) {...}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                Denna kodrad är en av instruktionerna som
+                                funktionen <i>playSound()</i> utför. Selecterar
+                                audio-elementet med dataattributets tangentkod
+                                <i>data-key</i>, sparar elementet i variabeln
+                                "audio". "e":et kommer från parametern och
+                                innehåller information från html-elementet.
+                                <i>key-code</i> är tangentknappkoden, och följer
+                                med "e":et så att rätt tangent, som är kopplat
+                                till ljudet kan spelas upp Använder backticks
+                                eller <i>template literals</i>, så att vi kan
+                                sammanfoga tangentkoden.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                var audio =
+                                document.querySelector(`audio[data-key="${e.keyCode}"]`);
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                <i>if-statement</i> är en kontroll, i vilket den
+                                kollar på ett värde och beroende på värdet utför
+                                något. Det fungerar så att värdet kontrolleras
+                                med ett villkor. Antinen uppfylls villkoret
+                                eller inte, och agerar därefter. I det här
+                                fallet, kollar om variabeln "audion" inte är
+                                <i>null</i> eller tom på värde. Om "audio" är
+                                tomt så avslutas instruktionen med nyckelordet
+                                <i>return</i>.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">if (!audio) return;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                "key" är en variabel som innehåller ett
+                                html-element. Varje databehållare har inbyggda
+                                metoder eller egenskaper. Här ser vi en egenskap
+                                <i>classList</i> som tilldelar variabeln "key"
+                                klassen "playing" med hjälp av metoden
+                                <i>add()</i>.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                key.classList.add('playing');
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                <i>this</i> är ett nyckelord som referear till
+                                en specifik variabel, i detta fall, pekar mot
+                                just den här kodraden. Denna kod innehåller
+                                variabeln "key". Eftersom vi har fler än en
+                                "key" som spelar upp ljud, så använder man this,
+                                för att skilja dem åt. <i>remove()</i>-metoden
+                                är tvärtemot <i>add()</i> och tar bort klassen
+                                "playing".
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                this.classList.remove('playing');
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                "keys" är en lista eller en kollektion av
+                                htmlelementer.
+                                <i>forEach()</i> är en inbyggd loop som är en
+                                metod som finns i alla arrayer. Den kan ta emot
+                                flera argument, här ser vi att vi skickar in ett
+                                argument, ett så kallat
+                                <i>callback-funktion</i>, vilket är ett anonym
+                                funktion. Med anonym menas att funktionen
+                                behöver inget namn.
+                                <i>callback-funktionen</i> har också argument.
+                                Här skickar vi in ett element som "key" och
+                                tilldelas funktionen <i>addEventListiner</i>.
+                                <i>addEventListiner</i> är en funktion som
+                                "lyssnar" efter händelser.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                keys.forEach((key) =>
+                                key.addEventListener('transitionend',
+                                removeTransition));
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                <i>window</i> är ett objekt vilket referar det
+                                som finns på webbläsarens skärm. Här registreras
+                                en händelse, med hjälp av
+                                <i>addEventListener</i>, knapptryck och triggar
+                                igång funktionen "playSound".
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                window.addEventListener('keydown', playSound);
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                En funktion som tilldelar värdet "none", till
+                                egenskapen "display". "menu" refererar till en
+                                html-element.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                function closeMenu() { <br>
+                                menu.style.display = 'none'; <br>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                En funktion som tilldelar värdet "block", till
+                                egenskapen "display" så att "menu", som
+                                refererar till en html-element, syns.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                function openMenu() { <br>
+                                menu.style.display = 'block'; <br>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                "isOpened" refererar till en variabel som
+                                innehåller attibuten <i>aria-expanded</i>.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                var isOpened =
+                                hamburgerButton.getAttribute('aria-expanded');
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                Variabeln "display" får värdet från ett
+                                html-element med hjälp av window-objektets
+                                inbyggda metod <i>getComputedStyle</i>.
+                                <i>getComputedStyle</i> uppdateras automatiskt
+                                så fort förändring har gjorts. Med hjälp av
+                                <i>getComputedStyle</i> egenskapen
+                                <i>display</i>, får variabeln "display", den
+                                aktuella värdet.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                var display =
+                                window.getComputedStyle(hamburgerButton).display;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                I den här <i>addEventListener</i> ser vi
+                                händelsen <i>resize</i>, som refererar till
+                                webbläsarens skrämstorlek, registrerar
+                                webbläsarens skärmförndring och triggar igång
+                                funktionen "isOpen".
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                window.addEventListener("resize", isItOpen);
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-wrapper">
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                Tilldelar ett <i>addEventListiner</i> till
+                                variabeln "hamburgarknappen". Här triggas
+                                funktionen "expandButton" av en musklick.
+                            </p>
+                        </div>
 
-                </p>
-                <p>De selekteras för att
-                    koppla ihop med audioelementen. Vilket också är selekterad.
-                    Det är selekterad via elementens <i>data-keyattributen</i>.
-                    På det här sättet så behöver vi inte selektera varje element, utan Javscript för det åt oss.
-                    För att loopa igenom listan av knappar, kan man antingen skapa en for-loop, eller använda den inbyggda funktionen <i>forEach</i>.</p>
-                    <p><i>forEach</i>, är en inbyggd Javascript-funktion som hanterar varje indexplats i en array och gör något med det (<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">om forEach</a>).
-                    Här används <i>foreach</i> för att lägga till en händelse som då triggas när man trycker på en knapp.</p>
-
-                <p>Du ska presentera projektet av vald teknik.</p>
-                <p>Jag valde att fördjupa mig i SVG</p>
-                <p>
-                    Här skriver du kort om vad SVG är och varför det är att
-                    föredras
-                </p>
-                <p>KÄLLA PÅ DINA PÅSTÅENDEN</p>
-                <p>Skriv källan också</p>
-                <p>https://developer.mozilla.org/en-US/docs/Web/SVG</p>
-                <p>
-                    https://www.creativebloq.com/news/6-reasons-why-you-should-be-using-svg
-                </p>
-                <p>https://deliciousbrains.com/svg-advantages-developers/</p>
-
-                <p>
-                    BILDER PÅ PROCESSEN NÄR DU HAR SKRIVIT SVG-KODEN UTIRFRÅN
-                    SVG-tutorialn
-                </p>
-                <p>STEG FÖR STEG, TYP SOM EN GUIDE</p>
-                <p>BILD PÅ: svg-rutan i hmtl</p>
-                <p>BILD PÅ WEBBLÄSAREN när svg utvecklas</p>
-
-                <p>Steg för steg förklaring av arbetet</p>
-
-                <p>SKRIV UPP ALLA KÄLLOR</p>
-                <p>KÄLLA</p>
-                <a
-                    style="color: white"
-                    target="_blank"
-                    href="https://courses.wesbos.com/account/access/64be748ce6f7bdd62736eef4/view/194130650"
-                    >TRUM MASKIN</a
-                >
-                <a
-                    style="color: white"
-                    target="_blank"
-                    href="https://www.youtube.com/watch?v=R00QiudbD4Y&t=1007s&ab_channel=KevinPowell"
-                    >SVG-Tutorial</a
-                >
-                <p>Inledning</p>
-
-                <p>Jag valde att koda ihop en trum-och ljudmaskin</p>
-                <p>Jag utgick från en kurs som finns tillgänglig</p>
-                <p>
-                    key code - varje tangent på tangetbordet, har en kod som är
-                    specifik till just den tangenten
-                </p>
-                <p>
-                    Man använder data-attributet data-key för att binda
-                    tangenten med ett speciellt ljud som ska låta när man väl
-                    trycker på tangenten
-                </p>
+                        <div class="information-item">
+                            <p class="explainer">
+                                hamburgerButton.addEventListener('click',
+                                expandButton);
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <footer class="footer-wrapper">
@@ -227,3 +359,4 @@
         <script src="toogleHamburgerButton.js"></script>
     </body>
 </html>
+<!-- Validerad 28/7 2023 -->
