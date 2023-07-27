@@ -1,3 +1,6 @@
+/* Google-font import */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 /*-------------------------- */
 
 /* Innehållsförteckning */
@@ -13,10 +16,6 @@
 
 /*-------------------------- */
 
-/* Google-font import */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
-
 /* Variabler */
 :root {
     --max-size: 1000px;
@@ -29,8 +28,8 @@
 /* Globala inställningar */
 body {
     box-sizing: border-box;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--black, #000);
+    color: var(--white, #fff);
 }
 
 h1,
@@ -66,7 +65,6 @@ a{
 
 img {
     width: 100%;
-    max-height: auto;
 }
 
 button {
@@ -80,21 +78,22 @@ button {
 
 .app-button {
     background-color: transparent;
-    border: 3px solid var(--lavender);
+    border: 3px solid var(--lavender, lavender);
     padding: 1rem;
     margin: 1rem;
-    color: var(--lavender);
+    color: var(--lavender, lavender);
     transition: background-color 0.2s ease-in;
 }
 
 .app-button:hover {
-    background-color: var(--lavender);
-    color: var(--black);
+    background-color: var(--lavender, lavender);
+    color: var(--black, #000);
 }
 
-a:hover{
-    background-color: var(--lavender);
-    color: var(--black);
+.footer-links-container li a:hover,
+.links-container li:hover{
+    background-color: var(--lavender, lavender);
+    color: var(--black, #000);
 }
 
 /* Navbar */
@@ -102,7 +101,7 @@ a:hover{
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--black);
+    background-color: var(--black,#000);
     position: fixed;
     margin: 0;
     padding: 0;
@@ -130,25 +129,26 @@ a:hover{
 .links-container li {
     max-width: 200px;
     width: 100%;
-    border: 1px solid var(--white);
+    border: 1px solid var(--white, #fff);
     margin-top: 0.5rem;
+    transition: .2s ease-in;
 }
 
 .links-container li a {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: var(--white);
+    color: var(--white, #fff);
     padding: 1rem;
 }
 
 .links-container li:focus {
-    background-color: var(--lavender);
+    background-color: var(--lavender,lavender);
     color: var(--black);
 }
 
 .active-page {
-    background-color: var(--lavender);
+    background-color: var(--lavender, lavender);
 }
 
 .active-page a {
@@ -164,25 +164,26 @@ a:hover{
 }
 
 #hamburger .line {
-    transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+    transition: y 300ms ease-in 300ms, transform 300ms ease-in, opacity 0ms 300ms;
     transform-origin: center;
 }
 
 #hamburger[aria-expanded='true'] .line {
-    transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+    transition: y 300ms ease-in, transform 300ms ease-in 300ms, opacity 0ms 300ms;
 }
 
+/* varnade för det här, hittade inget fix.  */
 #hamburger[aria-expanded='true'] :is(.top, .bottom) {
     y: 45;
 }
 #hamburger[aria-expanded='true'] .top {
-    rotate: 45deg;
+    transform: rotate(45deg)
 }
 #hamburger[aria-expanded='true'] .middle {
     opacity: 0;
 }
 #hamburger[aria-expanded='true'] .bottom {
-    rotate: -45deg;
+    transform: rotate(-45deg)
 }
 
 #menu {
@@ -198,12 +199,12 @@ a:hover{
         bottom: 0;
         right: 0;
         display: none;
-        background-color: var(--black);
+        background-color: var(--black, #000);
         grid-template-rows: 40px 1fr 1fr 1fr;
     }
 
     a {
-        color: var(--white);
+        color: var(--white, #fff);
         font-weight: bold;
     }
 
@@ -264,21 +265,21 @@ a:hover{
 }
 
 .key {
-    border: 1px solid var(--lavender);
+    border: 1px solid var(--lavender,lavender);
     border-radius: 5px;
     font-size: 1.5rem;
     padding: 1rem 0.5rem;
     transition: all 0.07s;
     text-align: center;
-    color: var(--lavender);
-    text-shadow: 0 0 5px var(--black);
+    color: var(--lavender, lavender);
+    text-shadow: 0 0 5px var(--black, #000);
 }
 
 .playing {
     transform: scale(1.02);
-    border-color: var(--yellow);
-    box-shadow: 0 0 10px var(--yellow);
-    background-color: var(--white);
+    border-color: var(--yellow, yellow);
+    box-shadow: 0 0 10px var(--yellow, yellow);
+    background-color: var(--white, #fff);
 }
 
 kbd {
@@ -290,7 +291,7 @@ kbd {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--lavender);
+    color: var(--lavender, lavender);
 }
 
 /* Footer */
@@ -320,15 +321,18 @@ kbd {
 }
 
 .footer-links-container li a{
-    color: var(--white);
+    color: var(--white, #fff);
     text-decoration: none;
     transition: .2s ease-in;
 }
 
 .footer-links-container{
-    border: 1px solid var(--white);
+    border: 1px solid var(--white, #fff);
 }
 
 .footer-container p span{
     font-style: italic;
 }
+
+
+/* Validerad 28/7 2023, ett fel, svg-egenskapen "y" kodrad: 178. Hittade inget fix  */

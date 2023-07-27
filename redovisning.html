@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" href="/img/drum_favicon.png" type="image/png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="stylesheet.css" />
+        <meta charset="UTF-8">
+        <link rel="icon" href="/img/drum_favicon.png" type="image/png">
+        <link rel="stylesheet" href="stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Redovisning</title>
     </head>
     <body>
@@ -13,21 +13,19 @@
                 <div class="logo-container">
                     <img
                         src="/img/drum_logo.png"
-                        alt="DRUM-logotyp för webbplatsen"
-                    />
+                        alt="DRUM-logotyp för webbplatsen">
                 </div>
                 <div id="menu">
                     <ul class="links-container">
-                        <li class="active-page">
+                        <li>
                             <a href="index.html">Drum</a>
                         </li>
                         <li><a href="presentation.html">Tekniken</a></li>
-                        <li><a href="redovisning.html">Redovisning</a></li>
+                        <li class="active-page"><a href="redovisning.html">Redovisning</a></li>
                     </ul>
                 </div>
                 <button
                     id="hamburger"
-                    aria-controls="primary-navigation"
                     aria-expanded="false"
                 >
                     <svg viewBox="0 0 100 100" width="40" fill="white">
@@ -67,10 +65,133 @@
         </div>
         <main class="main-wrapper">
             <div class="main-container">
-                <h1>Redovisning</h1>
-                <p>Redovisning av det jag har kodat</p>
-                <p>du ska visa förståelse med egna formuleringar</p>
-                <p>du ska klistra in kod från app-filen</p>
+                <h1>Trummaskinen</h1>
+                <p>
+                    Jag bestämde mig för att bygga en trummaskin, efter en
+                    videokurs från hemsidan
+                    <a target="_blank" href="https://javascript30.com/"
+                        >Javascript30</a
+                    >. Trummaskinen spelar man med tangentbordet. På skärmen,
+                    ser vi både vilka tangenter man använder men också vilket
+                    ljud den spelar upp.
+                </p>
+                <h3>HTML</h3>
+                <p>
+                    Tekniken bakom är uppbyggd i Javascript med HTML. HTML-koden
+                    är strukturerad med en div, som fungerar som en behållare.
+                </p>
+                <p>
+                    I behållaren finns flera div där varje div är uppbyggd med
+                    en attribut <i>data-key</i>, vilket är en teknik som
+                    tillåter specialanpassade egenskaper till alla
+                    HTML-element(<a
+                        target="_blank"
+                        href="https://www.w3schools.com/tags/att_data-.asp"
+                        >om data-key</a
+                    >)
+                </p>
+                <p>
+                    Den attibuten är kopplad till en ljud-fil. Förutom en
+                    <i>data-key</i>, så finns en <i>kbd</i>-tag, som finns för
+                    att definera tangentknappsnedtryck (<a
+                        target="_blank"
+                        href="https://www.w3schools.com/tags/tag_kbd.asp"
+                        >om kbd</a
+                    >), den taggen representerar själva tangentknappen. Och en
+                    spanelement för enkel styling, med själva ljudtiteln.
+                </p>
+                <p>
+                    I HMTL-strukturen finns ett element, som jag har inte har
+                    sett tidigare, ett <i>audioelement</i>, som används för att
+                    spela upp ljud (<a
+                        target="_blank"
+                        href="https://www.w3schools.com/html/html5_audio.asp"
+                        >om audioelementet</a
+                    >), som imgelementet är till för bilder.
+                </p>
+                <p>
+                    I audioelementet finns också ett <i>data-keyattributen</i>,
+                    och en ljudfil, kopplad till audioelementet.
+                </p>
+                <p>
+                    Audioelementet syns för övrigt inte. Den finns för att spela
+                    upp ljud. Ljuden är royalfree och har Common Creative-licens
+                    för att kunna användas lagligt. Här är
+                    <a target="_blank" href="https://freesound.org/"
+                        ><i>hemsidan</i></a
+                    >, från vilket ljuden jag har laddat ner ifrån.
+                </p>
+                <h3>Javscript</h3>
+                <p>
+                    Scripten består av två stycken funktioner, en selektion av
+                    knappar och element och två stycken events.
+                </p>
+                <p>
+                    Selektionen av knapparna är själva div från hmtl, som då
+                    refererar till tangentknapparna. I Javascript, får vi selektionen i en lista, en array, vilket är en behållare av data.
+                    Knapparna i behållaren ska tilldelas ett event, det är en händelse som triggas av något. Det här bygget handlar om en trummaskin. Det som triggar ljudet, är ju tangentknapparna. Och det är det här vi ska lägga till.
+                    Istället för att gå igenom varje knapp, för sig, kan vi låta Javascript göra det åt oss med en loop.
+
+                </p>
+                <p>De selekteras för att
+                    koppla ihop med audioelementen. Vilket också är selekterad.
+                    Det är selekterad via elementens <i>data-keyattributen</i>.
+                    På det här sättet så behöver vi inte selektera varje element, utan Javscript för det åt oss.
+                    För att loopa igenom listan av knappar, kan man antingen skapa en for-loop, eller använda den inbyggda funktionen <i>forEach</i>.</p>
+                    <p><i>forEach</i>, är en inbyggd Javascript-funktion som hanterar varje indexplats i en array och gör något med det (<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">om forEach</a>).
+                    Här används <i>foreach</i> för att lägga till en händelse som då triggas när man trycker på en knapp.</p>
+
+                <p>Du ska presentera projektet av vald teknik.</p>
+                <p>Jag valde att fördjupa mig i SVG</p>
+                <p>
+                    Här skriver du kort om vad SVG är och varför det är att
+                    föredras
+                </p>
+                <p>KÄLLA PÅ DINA PÅSTÅENDEN</p>
+                <p>Skriv källan också</p>
+                <p>https://developer.mozilla.org/en-US/docs/Web/SVG</p>
+                <p>
+                    https://www.creativebloq.com/news/6-reasons-why-you-should-be-using-svg
+                </p>
+                <p>https://deliciousbrains.com/svg-advantages-developers/</p>
+
+                <p>
+                    BILDER PÅ PROCESSEN NÄR DU HAR SKRIVIT SVG-KODEN UTIRFRÅN
+                    SVG-tutorialn
+                </p>
+                <p>STEG FÖR STEG, TYP SOM EN GUIDE</p>
+                <p>BILD PÅ: svg-rutan i hmtl</p>
+                <p>BILD PÅ WEBBLÄSAREN när svg utvecklas</p>
+
+                <p>Steg för steg förklaring av arbetet</p>
+
+                <p>SKRIV UPP ALLA KÄLLOR</p>
+                <p>KÄLLA</p>
+                <a
+                    style="color: white"
+                    target="_blank"
+                    href="https://courses.wesbos.com/account/access/64be748ce6f7bdd62736eef4/view/194130650"
+                    >TRUM MASKIN</a
+                >
+                <a
+                    style="color: white"
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=R00QiudbD4Y&t=1007s&ab_channel=KevinPowell"
+                    >SVG-Tutorial</a
+                >
+                <p>Inledning</p>
+
+                <p>Jag valde att koda ihop en trum-och ljudmaskin</p>
+                <p>Jag utgick från en kurs som finns tillgänglig</p>
+                <p>
+                    key code - varje tangent på tangetbordet, har en kod som är
+                    specifik till just den tangenten
+                </p>
+                <p>
+                    Man använder data-attributet data-key för att binda
+                    tangenten med ett speciellt ljud som ska låta när man väl
+                    trycker på tangenten
+                </p>
             </div>
         </main>
         <footer class="footer-wrapper">
