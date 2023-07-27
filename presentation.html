@@ -2,7 +2,7 @@
 <html lang="sv">
     <head>
         <meta charset="UTF-8">
-        <link rel="icon" href="/img/drum_favicon.png" type="image/png">
+        <link rel="icon" href="/img/logos/drum_favicon.png" type="image/png">
         <link rel="stylesheet" href="stylesheet.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tekniken</title>
@@ -12,7 +12,7 @@
             <div class="nav-container">
                 <div class="logo-container">
                     <img
-                        src="/img/drum_logo.png"
+                        src="/img/logos/drum_logo.png"
                         alt="DRUM-logotyp för webbplatsen"
                     >
                 </div>
@@ -21,14 +21,13 @@
                         <li>
                             <a href="index.html">Drum</a>
                         </li>
-                        <li class="active-page"><a href="presentation.html">Tekniken</a></li>
+                        <li class="active-page">
+                            <a href="presentation.html">Tekniken</a>
+                        </li>
                         <li><a href="redovisning.html">Redovisning</a></li>
                     </ul>
                 </div>
-                <button
-                    id="hamburger"
-                    aria-expanded="false"
-                >
+                <button id="hamburger" aria-expanded="false">
                     <svg viewBox="0 0 100 100" width="40" fill="white">
                         <rect
                             class="top line"
@@ -60,143 +59,422 @@
         </nav>
         <div class="hero-wrapper">
             <div class="hero-container">
-                <h1 class="hero-title">Tekniken</h1>
-                <p>
-                    Här ska jag presentera tekniken bakom trummaskinen och min
-                    fördjupning SVG
-                </p>
+                <h1 class="hero-title">Tekniken bakom</h1>
             </div>
         </div>
 
         <main class="main-wrapper">
             <div class="main-container">
-                <h1>Trummaskinen</h1>
-                <p>
-                    Jag bestämde mig för att bygga en trummaskin, efter en
-                    videokurs från hemsidan
-                    <a target="_blank" href="https://javascript30.com/"
-                        >Javascript30</a
-                    >. Trummaskinen spelar man med tangentbordet. På skärmen,
-                    ser vi både vilka tangenter man använder men också vilket
-                    ljud den spelar upp.
-                </p>
-                <h3>HTML</h3>
-                <p>
-                    Tekniken bakom är uppbyggd i Javascript med HTML. HTML-koden
-                    är strukturerad med en div, som fungerar som en behållare.
-                </p>
-                <p>
-                    I behållaren finns flera div där varje div är uppbyggd med
-                    en attribut <i>data-key</i>, vilket är en teknik som
-                    tillåter specialanpassade egenskaper till alla
-                    HTML-element(<a
-                        target="_blank"
-                        href="https://www.w3schools.com/tags/att_data-.asp"
-                        >om data-key</a
-                    >)
-                </p>
-                <p>
-                    Den attibuten är kopplad till en ljud-fil. Förutom en
-                    <i>data-key</i>, så finns en <i>kbd</i>-tag, som finns för
-                    att definera tangentknappsnedtryck (<a
-                        target="_blank"
-                        href="https://www.w3schools.com/tags/tag_kbd.asp"
-                        >om kbd</a
-                    >), den taggen representerar själva tangentknappen. Och en
-                    spanelement för enkel styling, med själva ljudtiteln.
-                </p>
-                <p>
-                    I HMTL-strukturen finns ett element, som jag har inte har
-                    sett tidigare, ett <i>audioelement</i>, som används för att
-                    spela upp ljud (<a
-                        target="_blank"
-                        href="https://www.w3schools.com/html/html5_audio.asp"
-                        >om audioelementet</a
-                    >), som imgelementet är till för bilder.
-                </p>
-                <p>
-                    I audioelementet finns också ett <i>data-keyattributen</i>,
-                    och en ljudfil, kopplad till audioelementet.
-                </p>
-                <p>
-                    Audioelementet syns för övrigt inte. Den finns för att spela
-                    upp ljud. Ljuden är royalfree och har Common Creative-licens
-                    för att kunna användas lagligt. Här är
-                    <a target="_blank" href="https://freesound.org/"
-                        ><i>hemsidan</i></a
-                    >, från vilket ljuden jag har laddat ner ifrån.
-                </p>
-                <h3>Javscript</h3>
-                <p>
-                    Scripten består av två stycken funktioner, en selektion av
-                    knappar och element och två stycken events.
-                </p>
-                <p>
-                    Selektionen av knapparna är själva div från hmtl, som då
-                    refererar till tangentknapparna. I Javascript, får vi selektionen i en lista, en array, vilket är en behållare av data.
-                    Knapparna i behållaren ska tilldelas ett event, det är en händelse som triggas av något. Det här bygget handlar om en trummaskin. Det som triggar ljudet, är ju tangentknapparna. Och det är det här vi ska lägga till.
-                    Istället för att gå igenom varje knapp, för sig, kan vi låta Javascript göra det åt oss med en loop.
+                <section class="information-wrapper">
+                    <h2>Trummaskinen</h2>
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                Jag bestämde mig för att bygga en trummaskin,
+                                efter en videokurs från hemsidan
+                                <a
+                                    target="_blank"
+                                    href="https://javascript30.com/"
+                                    >Javascript30</a
+                                >. Trummaskinen spelar man med tangenterna. På
+                                skärmen ser man vilka tangenter som spelar upp
+                                ljud samt vilket ljud tangenten spelar upp.
+                                Strukturen är skriven i html med element och
+                                taggar som man manipuleras med Javascript.
+                                Javascriptprogrammet består av DOM-manipulation,
+                                funktioner och events på dessa htmlelementer och
+                                taggar.
+                            </p>
+                        </div>
+                        <div class="img-container">
+                            <img
+                                src="/img/presentationImg/drummachine.png"
+                                alt="En bild på hemsidan"
+                            >
+                        </div>
+                    </div>
+                </section>
 
-                </p>
-                <p>De selekteras för att
-                    koppla ihop med audioelementen. Vilket också är selekterad.
-                    Det är selekterad via elementens <i>data-keyattributen</i>.
-                    På det här sättet så behöver vi inte selektera varje element, utan Javscript för det åt oss.
-                    För att loopa igenom listan av knappar, kan man antingen skapa en for-loop, eller använda den inbyggda funktionen <i>forEach</i>.</p>
-                    <p><i>forEach</i>, är en inbyggd Javascript-funktion som hanterar varje indexplats i en array och gör något med det (<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">om forEach</a>).
-                    Här används <i>foreach</i> för att lägga till en händelse som då triggas när man trycker på en knapp.</p>
+                <section class="information-wrapper">
+                    <h3>HTML</h3>
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                Htmlelementen och taggarna är skrivna med nio
+                                stycken div-element med en data-keyattribut med
+                                en tilldelad nummer. Numret representerar
+                                tangentknapparna och är till för att kunna
+                                koppla tangenten till ett specifik htmlelement
+                                som används för att spela upp ljud,
+                                audio-taggen. Likt img-taggen som är speciellt
+                                skriven för att hantera bilder, är audio-taggen
+                                speciellt skriven för att hantera
+                                ljuduppspelning. Dessa ljud får man själv ladda
+                                upp. Det finns lika många audio-taggar som det
+                                finns div med data-keyatrributet. Både div- och
+                                audio-taggarna har samma tilldelade nummer för
+                                att enkelt sammankoppla ihop dem med Javascript.
+                                På det sättet kan vi spela med tangenterna och
+                                ljud låter från webbläsaren.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                &lt;div data-key="65" class="key"&gt;<br>
+                                <span>&lt;kbd&gt;A&lt;/kbd&gt;</span> <br>
+                                <span
+                                    >&lt;span
+                                    class="sound"&gt;clap&lt;/span&gt;</span
+                                >
+                                <br>
+                                &lt;/div&gt;
+                            </p>
+                            <p class="explainer">
+                                &lt;audio <br>
+                                <span>data-key="65"</span><br>
+                                <span>src="clap.wav"</span><br>
+                                &gt;&lt;/audio&gt;
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
-                <p>Du ska presentera projektet av vald teknik.</p>
-                <p>Jag valde att fördjupa mig i SVG</p>
-                <p>
-                    Här skriver du kort om vad SVG är och varför det är att
-                    föredras
-                </p>
-                <p>KÄLLA PÅ DINA PÅSTÅENDEN</p>
-                <p>Skriv källan också</p>
-                <p>https://developer.mozilla.org/en-US/docs/Web/SVG</p>
-                <p>
-                    https://www.creativebloq.com/news/6-reasons-why-you-should-be-using-svg
-                </p>
-                <p>https://deliciousbrains.com/svg-advantages-developers/</p>
+                <section class="information-wrapper">
+                    <h3>Javscript</h3>
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                I scriptprogrammet, längst ner, finns en
+                                händelse som triggas av tangentknapparna, som
+                                registreras av ett Javascriptobjekt, window med
+                                en addEventListiner, en funktion som “lyssnar”
+                                efter händelser och gör något.
+                            </p>
+                            <p>
+                                Händelsen som triggas av tangentknapparna
+                                “keydown”, utlöser en funktion, playSound, som
+                                spelar upp det ljud som registrerats av
+                                användaren. För att veta vilket audio-tagg som
+                                ska spela upp det ljud som användaren har
+                                triggat, så skickas det en “event”, ett så
+                                kallat händelseobjekt som har information om det
+                                som triggade igång ett event. Eftersom man
+                                trycker ner ett tangentknapp, så skickas det
+                                information om vilket av alla tangenter som blev
+                                nedtryckt med i funktionen playSound.
+                                PlaySoundfunktionen selekteras audio-taggar från
+                                hmtl. Varje audio-tagg refereras till ett
+                                nummer. Eventobjektet som skickas med i
+                                playSound-funktionen kopplas till ett
+                                audio-tagg. Även div-taggarna med
+                                data-keyattributen selekteras med samma
+                                eventobjektinformation, och förvaras lokalt i en
+                                variabel.
+                            </p>
+                            <p>
+                                Direkt under selektionerna, finns ett
+                                if-statement med villkoret att inget triggas om
+                                tangenten användaren har tryckts inte kan
+                                kopplas med ett audio-tagg. Kan man koppla
+                                audio-taggen med eventet, så utlöses en inbyggd
+                                funktion som följer med audio-taggen. Men ljudet
+                                spelas endast en gång vilket betyder att man
+                                måste “starta om” ljudet med en inbyggd egenskap
+                                i audio-taggen.
+                            </p>
+                            <p>
+                                Och i slutet av funktionen läggs en klass
+                                “playing” på den div-tagg som är selekterad som
+                                en visuell feedback till användaren. Klassen är
+                                stylad i css och har olika egenskaper som
+                                animeras genom att gå från en styling till en
+                                annan, en övergång, transition.
+                            </p>
+                            <p>
+                                I playSound-funktionen läggs en klassen
+                                “playing” på en div-tagg, samma div-tagg kopplat
+                                till ett ljud. Klassen är endast en visuell
+                                feedback, som triggar igång en animation, en så
+                                kallad övergång, transition. Den klassen ligger
+                                kvar och måste då tas bort när nästa
+                                tangentknapp blir nedtryckt. För att fixa detta
+                                måste man då selektera div-taggarna med
+                                data-keyattributet. Div-taggarna förvaras i en
+                                kollektion, en array. För att göra något med
+                                divtaggarna behöver de trigga något, något måste
+                                hända när man trycker ner en tangent. Och något
+                                att “lyssna” efter när en sådan händelse har
+                                skett. Till det använder man addEventListiner.
+                                För att tilldela div-taggarna behöver man göra
+                                det till en och varje div-tagg. Eftersom vi har
+                                en kollektion, en array med divtaggar kan man
+                                använda en loop. I det här fallet, en
+                                forEach-loop, liknande som en for-loop men som
+                                är inbyggd i Javascript. ForEach-loppen tar
+                                flera argument, och returnerar en index för
+                                varje dataelement i en kollektion. På så sätt,
+                                kan vi då tilldela en addEventListiner för varje
+                                div-tagg i arrayen. Eventet som ska triggas görs
+                                av en "transition", övergång, vilket startar
+                                igång en funktion “removeTransition” vars
+                                uppgift är att ta bort den klass som tilldelades
+                                det tangentknapp som blev nedtryckt.
+                            </p>
+                            <p>
+                                I funktionen removeTransition, som triggas igång
+                                av addEventListiner, följer eventobjektet med.
+                                Informationen i objektets event finns förutom
+                                vilket av knapparna som blev nedtryckt, även
+                                information från css-egenskaper som följer dessa
+                                div-taggar. Eftersom vi har en klass som har en
+                                css-egenskap som ändras, från en styling från en
+                                annan så kan Javascript registrera när
+                                övergången är klar. Därför finns det ett
+                                if-statement med villkoret som kollar om knappen
+                                har den egenskapen, om inte så avbryts
+                                funktionen. Men om det finns en sådan egenskap,
+                                tas då klassen “playing” bort från div-taggen.
+                                Och den visuella feedbacken ger effekt, det blir
+                                en kort animation. Och trummaskinen spelar upp
+                                ljud och ger visuell feedback.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                function playSound(e) { <br>
+                                <span>
+                                    const audio =
+                                    document.querySelector(`audio[data-key="${e.keyCode}"]`)</span
+                                >
+                                <br><br>
+                                <span>
+                                    const key =
+                                    document.querySelector(`.key[data-key="${e.keyCode}"]`)</span
+                                >
+                                <br><br>
+                                <span>
+                                    if (!audio) return audio.currentTime = 0
+                                </span>
+                                <br>
+                                <span>
+                                    audio.play() key.classList.add('playing')
+                                </span>
+                                <br>
+                                } <br>
+                                <br>
+                                <br>
+                                function removeTransition(e) { <br>
+                                <span>
+                                    if (e.propertyName !== 'transform')
+                                    return</span
+                                >
+                                <br>
+                                <br>
+                                <span>this.classList.remove('playing') </span>
+                                <br>
+                                } <br><br>
+                                const keys = document.querySelectorAll('.key')
+                                <br><br>
+                                keys.forEach((key) =>
+                                key.addEventListener('transitionend',
+                                removeTransition))
+                                <br><br>
+                                window.addEventListener('keydown', playSound)
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
-                <p>
-                    BILDER PÅ PROCESSEN NÄR DU HAR SKRIVIT SVG-KODEN UTIRFRÅN
-                    SVG-tutorialn
-                </p>
-                <p>STEG FÖR STEG, TYP SOM EN GUIDE</p>
-                <p>BILD PÅ: svg-rutan i hmtl</p>
-                <p>BILD PÅ WEBBLÄSAREN när svg utvecklas</p>
+                <section class="information-wrapper">
+                    <h2>Fördjupning: SVG</h2>
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                Jag byggde hamburgarknappen i svg och animerade
+                                den med css, och som då triggas av javascript.
+                                Hamburgarknappen är helt ritat i svg och är
+                                gjord efter den här tutorial
+                                <a
+                                    style="color: white"
+                                    target="_blank"
+                                    href="https://www.youtube.com/watch?v=R00QiudbD4Y&t=1007s&ab_channel=KevinPowell"
+                                    >SVG-Hamburger</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="information-wrapper">
+                    <h3>HTML</h3>
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                I htmlstrukturen hittar vi svg-taggen, ett
+                                element som ritar upp vektorgrafik. Till
+                                svg-taggen behöver man bestämma storlek och då
+                                hittar vi egenskapen viewBox. Den bestämmer hur
+                                mycket av vektorgrafiken som ska synas. Bredvid
+                                viewBoxen sätter vi då själva storleken på
+                                svggrafiken. Vi behöver endast sätta en width,
+                                men det går även att sätta en height.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                &lt;svg class="hamburger" viewBox="0 0 100 100"
+                                width="40"&gt; <br>
+                                <span
+                                    >&lt;rect class="top line" width="80"
+                                    height="10" x="10" y="70"
+                                    rx="5"&gt;&lt;/rect&gt;</span
+                                >
+                                <br>
+                                <span
+                                    >&lt;rect class="middle line" width="80"
+                                    height="10" x="10" y="50"
+                                    rx="5"&gt;&lt;/rect&gt;</span
+                                >
+                                <br>
+                                <span
+                                    >&lt;rect class="bottom line" width="80"
+                                    height="10" x="10" y="30"
+                                    rx="5"&gt;&lt;/rect&gt;</span
+                                >
+                                <br>
+                                &lt;/svg&gt;
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="information-wrapper">
+                    <h3>Rect</h3>
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                För att rita ut något, finns ett gäng olika
+                                egenskaper som följer med svg-taggen, bland
+                                annat rect-taggen, som ritar ut rektanglar eller
+                                rutor. Som default, är färgerna på svg alltid
+                                svart, men går naturligtvis att styla direkt på
+                                svg-taggen, eller i css.
+                            </p>
+                            <p>
+                                För att sätta mått på själva rekt-taggen
+                                använder man width och height. Dock så är måtten
+                                beroende av viewBoxens mått, så man använder
+                                inte pixelmått, rem eller liknande utan man kan
+                                se det som en procentandel av viewBoxens hela
+                                mått.
+                            </p>
+                            <p>
+                                För att positionera rekt-taggen använder man x
+                                och y, likt koordinater i en x- och y-axel. X
+                                representerar bredden och y höjden. Eftersom
+                                rect-taggen är en rektangel, så är den även
+                                kantig. Vill man runda av hörnen så använder man
+                                egenskapen rx. Här tillsatt med ett lågt värde
+                                så att det inte blir för runda kanter.
+                            </p>
+                        </div>
+                        <div class="img-container">
+                            <img
+                                src="/img/presentationImg/svg-1.png"
+                                alt="En bild på en rektangel"
+                            >
+                        </div>
+                    </div>
+                </section>
 
-                <p>Steg för steg förklaring av arbetet</p>
+                <section class="information-wrapper">
+                    <h3>aria-expanded</h3>
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                En hamburgarknapp består av tre stycken streck,
+                                rektanglar som ska påminna om en hamburgare.
+                                Därför innehåller svg-taggen tre stycken
+                                rect-taggar med olika y-värden.Varje rect-tagg
+                                har två klasser, ett gemensamt som representerar
+                                de tre strecken tillsammans för att smidigt
+                                styla dem, men även tre olika klasser som då
+                                representerar varje streck för sig. Det är för
+                                att kunna styla dem i css och även användas för
+                                att flytta dessa streck var för sig, för att
+                                kunna förvandla hamburgaren till ett kryss. För
+                                att göra detta behöver vi bestämma två olika
+                                lägen för hamburgarknappen som man sen kan
+                                manipuleras med Javascript. Svg-taggen är
+                                inkapslad i en button-tagg som fungerar som en
+                                container och har egenskapen aria-expanded, en
+                                egenskap som registreras av webbläsaren. Den har
+                                två lägen, false och true. Egenskapens ena
+                                läget, true, är stylad i css med en transition
+                                som skapar en övergång. Nu har vi bestämt två
+                                lägen, när egenskapen är false ser vi
+                                hamburgaren, är den true, ser vi ett kryss.
+                            </p>
+                        </div>
+                        <div class="img-container">
+                            <img
+                                src="/img/presentationImg/svg-2.png"
+                                alt="En bild på en rektangel"
+                            >
+                        </div>
+                    </div>
+                </section>
 
-                <p>SKRIV UPP ALLA KÄLLOR</p>
-                <p>KÄLLA</p>
-                <a
-                    style="color: white"
-                    target="_blank"
-                    href="https://courses.wesbos.com/account/access/64be748ce6f7bdd62736eef4/view/194130650"
-                    >TRUM MASKIN</a
-                >
-                <a
-                    style="color: white"
-                    target="_blank"
-                    href="https://www.youtube.com/watch?v=R00QiudbD4Y&t=1007s&ab_channel=KevinPowell"
-                    >SVG-Tutorial</a
-                >
-                <p>Inledning</p>
+                <section class="information-wrapper">
+                    <h3>Javascript</h3>
+                    <div class="information-container">
+                        <div class="text-item">
+                            <p>
+                                För att ändra läget från false till true behöver
+                                vi göra något som triggar igång övergången. Till
+                                det använder vi Javascript. I scripten,
+                                selekterar vi svg-containern hamburger, sparar
+                                informationen i en variabel för att då tilldela
+                                knappen en addEventlistiner som triggar igång
+                                ett event. Här är det ett klick som triggar
+                                igång händelsen och triggar igång
+                                expandButton-funktionen, som kollar vilket läge
+                                knappen befinner sig i med ett if-statement. Är
+                                den false, då ändras läget från false till true
+                                eller tvärtom. När läget ändras skapas en
+                                övergång och hamburgaren förvandlas från en
+                                hamburgare till ett kryss eller tvärtom.
+                            </p>
+                        </div>
+                        <div class="information-item">
+                            <p class="explainer">
+                                function expandButton() { <br>
+                                <span>
+                                    var isOpened =
+                                    hamburgerButton.getAttribute('aria-expanded');
+                                </span>
+                                <br>
+                                <span> if (isOpened === 'false') { </span><br>
+                                <span>
+                                    hamburgerButton.setAttribute('aria-expanded',
+                                    'true'); </span
+                                ><br>
 
-                <p>Jag valde att koda ihop en trum-och ljudmaskin</p>
-                <p>Jag utgick från en kurs som finns tillgänglig</p>
-                <p>
-                    key code - varje tangent på tangetbordet, har en kod som är
-                    specifik till just den tangenten
-                </p>
-                <p>
-                    Man använder data-attributet data-key för att binda
-                    tangenten med ett speciellt ljud som ska låta när man väl
-                    trycker på tangenten
-                </p>
+                                <span> } else {<br></span>
+                                <span>
+                                    hamburgerButton.setAttribute('aria-expanded',
+                                    'false'); </span
+                                ><br>
+                                <span> } </span><br>
+                                } <br>
+                                <br>
+                                var hamburgerButton =
+                                document.getElementById('hamburger'); <br>
+                                <br>
+                                hamburgerButton.addEventListener('click',
+                                expandButton);
+                            </p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
 
@@ -234,3 +512,4 @@
         <script src="toogleHamburgerButton.js"></script>
     </body>
 </html>
+<!-- Validerad 27/7 2023 -->
