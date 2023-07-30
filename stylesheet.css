@@ -120,6 +120,7 @@ button {
     border: 1px solid var(--white, #fff);
     margin-top: 0.5rem;
     transition: 0.2s ease-in;
+    border-radius: 5px;
 }
 
 .links-container li a {
@@ -272,6 +273,7 @@ button {
 
 .information-item {
     border: 1px solid var(--white, #fff);
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -367,6 +369,7 @@ kbd {
 
 .footer-links-container {
     border: 1px solid var(--white, #fff);
+    border-radius: 5px;
 }
 
 .footer-container p span {
