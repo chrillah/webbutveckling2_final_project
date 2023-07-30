@@ -152,14 +152,14 @@ button {
 }
 
 #hamburger .line {
-    transition: y 300ms ease-in 300ms, transform 300ms ease-in,
-        opacity 0ms 300ms;
+    transition: y 100ms ease-in 100ms, transform 100ms ease-in,
+        opacity 0ms 100ms;
     transform-origin: center;
 }
 
 #hamburger[aria-expanded='true'] .line {
-    transition: y 300ms ease-in, transform 300ms ease-in 300ms,
-        opacity 0ms 300ms;
+    transition: y 100ms ease-in, transform 100ms ease-in 100ms,
+        opacity 0ms 100ms;
 }
 
 /* varnade för det här, hittade inget fix.  */
