@@ -166,12 +166,15 @@ button {
 #hamburger[aria-expanded='true'] :is(.top, .bottom) {
     y: 45; /*<---- den här */
 }
+
 #hamburger[aria-expanded='true'] .top {
     transform: rotate(45deg);
 }
+
 #hamburger[aria-expanded='true'] .middle {
     opacity: 0;
 }
+
 #hamburger[aria-expanded='true'] .bottom {
     transform: rotate(-45deg);
 }
@@ -247,7 +250,7 @@ button {
     max-width: var(--max-size);
 }
 
-/* Presentationen tekiken bakom och Redovisning*/
+/* Presentationen tekniken bakom och Redovisning*/
 
 .information-wrapper{
     padding: 1rem 0;
@@ -332,6 +335,7 @@ kbd {
 /* Footer */
 
 .footer-wrapper {
+    padding-top: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -369,4 +373,4 @@ kbd {
     font-style: italic;
 }
 
-/* Validerad 28/7 2023, ett fel, svg-egenskapen "y" kodrad: 178. Hittade inget fix  */
+/* Validerad 28/7 2023, ett fel, svg-egenskapen "y" kodrad: 167. Hittade inget fix  */

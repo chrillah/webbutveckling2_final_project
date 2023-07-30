@@ -119,13 +119,16 @@
                                 audio-taggarna har samma tilldelade nummer för
                                 att enkelt sammankoppla ihop dem med Javascript.
                                 På det sättet kan vi spela med tangenterna och
-                                ljud låter från webbläsaren.
+                                ljud låter från webbläsaren. De elementen
+                                innanför div-taggarna, kdb-elementet
+                                representerar tangentbordsknappen, och span
+                                elementet är titeln på själva ljudet.
                             </p>
                         </div>
                         <div class="information-item">
                             <p class="explainer">
-                                &lt;div data-key="65" class="key"&gt;
-                                <span>&lt;kbd&gt;A&lt;/kbd&gt;</span>
+                                &lt;div <span> data-key="65" class="key"</span>&gt;<span>
+                                &lt;kbd&gt;A&lt;/kbd&gt;</span>
                                 <span
                                     >&lt;span
                                     class="sound"&gt;clap&lt;/span&gt;</span
@@ -162,15 +165,10 @@
                                 ska spela upp det ljud som användaren har
                                 triggat, så skickas det en “event”, ett så
                                 kallat händelseobjekt som har information om det
-                                som triggade igång ett event. Eftersom man
-                                trycker ner ett tangentknapp, så skickas det
-                                information om vilket av alla tangenter som blev
-                                nedtryckt med i funktionen playSound.
-                                PlaySoundfunktionen selekteras audio-taggar från
-                                hmtl. Varje audio-tagg refereras till ett
-                                nummer. Eventobjektet som skickas med i
-                                playSound-funktionen kopplas till ett
-                                audio-tagg. Även div-taggarna med
+                                som triggade igång eventet. Varje audio-tagg
+                                refereras till ett nummer. Eventobjektet som
+                                skickas med in playSound-funktionen kopplas till
+                                ett audio-tagg. Även div-taggarna med
                                 data-keyattributen selekteras med samma
                                 eventobjektinformation, och förvaras lokalt i en
                                 variabel.
@@ -179,7 +177,10 @@
                                 Direkt under selektionerna, finns ett
                                 if-statement med villkoret att inget triggas om
                                 tangenten användaren har tryckts inte kan
-                                kopplas med ett audio-tagg. Kan man koppla
+                                kopplas med ett audio-tagg.
+                            </p>
+                            <p>
+                                Kan man koppla
                                 audio-taggen med eventet, så utlöses en inbyggd
                                 funktion som följer med audio-taggen. Men ljudet
                                 spelas endast en gång vilket betyder att man
@@ -435,25 +436,25 @@
                                 En hamburgarknapp består av tre stycken streck,
                                 rektanglar som ska påminna om en hamburgare.
                                 Därför innehåller svg-taggen tre stycken
-                                rect-taggar med olika y-värden.Varje rect-tagg
-                                har två klasser, ett gemensamt som representerar
-                                de tre strecken tillsammans för att smidigt
-                                styla dem, men även tre olika klasser som då
-                                representerar varje streck för sig. Det är för
-                                att kunna styla dem i css och även användas för
-                                att flytta dessa streck var för sig, för att
-                                kunna förvandla hamburgaren till ett kryss. För
-                                att göra detta behöver vi bestämma två olika
-                                lägen för hamburgarknappen som man sen kan
-                                manipuleras med Javascript. Svg-taggen är
-                                inkapslad i en button-tagg som fungerar som en
-                                container och har egenskapen aria-expanded, en
-                                egenskap som registreras av webbläsaren. Den har
-                                två lägen, false och true. Egenskapens ena
-                                läget, true, är stylad i css med en transition
-                                som skapar en övergång. Nu har vi bestämt två
-                                lägen, när egenskapen är false ser vi
-                                hamburgaren, är den true, ser vi ett kryss.
+                                rect-taggar med olika y-värden. <br> <br>
+                                Varje rect-tagg har två klasser, ett gemensamt
+                                som representerar de tre strecken tillsammans
+                                för att smidigt styla dem, men även tre olika
+                                klasser som då representerar varje streck för
+                                sig. Det är för att kunna styla dem i css och
+                                även användas för att flytta dessa streck var
+                                för sig, för att kunna förvandla hamburgaren
+                                till ett kryss. För att göra detta behöver vi
+                                bestämma två olika lägen för hamburgarknappen
+                                som man sen kan manipuleras med Javascript.
+                                Svg-taggen är inkapslad i en button-tagg som
+                                fungerar som en container och har egenskapen
+                                aria-expanded, en egenskap som registreras av
+                                webbläsaren. Den har två lägen, false och true.
+                                Egenskapens ena läge, true, är stylad i css med
+                                en transition som skapar en övergång. Nu har vi
+                                bestämt två lägen, när egenskapen är false ser
+                                vi hamburgaren, är den true, ser vi ett kryss.
                             </p>
                         </div>
                         <div class="img-container">
@@ -525,6 +526,11 @@
                 <h2>Källa:</h2>
                 <ul class="footer-links-container">
                     <li>
+                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                            >developer.mozilla</a
+                        >
+                    </li>
+                    <li>
                         <a target="_blank" href="https://javascript30.com/"
                             >Javascript30</a
                         >
@@ -544,8 +550,7 @@
                     </li>
                 </ul>
                 <p>
-                    <span>Ett skolprojekt för Webbutveckling 2, av: </span
-                    >Christopher Rönnberg
+                    Ett skolprojekt för Webbutveckling 2, av: <span>Christopher Rönnberg</span>
                 </p>
                 <p></p>
             </div>
