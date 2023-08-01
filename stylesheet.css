@@ -25,6 +25,7 @@
     --lavender: #8a8fff;
     --white: #fff;
     --black: #000;
+    --beige: #a6977b;
 }
 
 /* Globala inställningar */
@@ -293,6 +294,47 @@ button {
     word-break: break-all;
     color: var(--white, #fff);
     padding-left: 20px;
+}
+
+.svg-container{
+    background-color: var(--beige);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+#svg-example{
+    cursor: pointer;
+    width: 100%;
+}
+
+#svg-example .line {
+    transition: y 100ms ease-in 100ms, transform 100ms ease-in,
+        opacity 0ms 100ms;
+    transform-origin: center;
+}
+
+#svg-example[aria-expanded='true'] .line {
+    transition: y 100ms ease-in, transform 100ms ease-in 100ms,
+        opacity 0ms 100ms;
+}
+
+/* varnade för det här, hittade inget fix.  */
+#svg-example[aria-expanded='true'] :is(.top, .bottom) {
+    y: 45; /*<---- den här */
+}
+
+#svg-example[aria-expanded='true'] .top {
+    transform: rotate(45deg);
+}
+
+#svg-example[aria-expanded='true'] .middle {
+    opacity: 0;
+}
+
+#svg-example[aria-expanded='true'] .bottom {
+    transform: rotate(-45deg);
 }
 
 /* Trummaskinen */
